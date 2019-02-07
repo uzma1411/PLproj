@@ -1,0 +1,339 @@
+<html>
+
+<head>
+    <title>Asra Travels - Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Faster One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Emilys Candy' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jura' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kumar One' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Anonymous Pro' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Patrick Hand SC' rel='stylesheet'>
+   <link href="servicecss.css" rel="stylesheet" type="text/css">
+</head>
+
+<body onload="typeWriter()">
+    <script src="servicejs.js"></script>
+    <div style="overflow-x: hidden;">
+        <div class="bgserviceParallex row">
+            <div class="col-md-12">
+                <div class="navbarContact" id="navbar">
+                    <a href="homepage1.html" id="xsasra">Asra travels</a>
+                    <a href="#" onclick="show()" id="bghoverbars" class="hidden-md hidden-lg hidden-sm visible-xs">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="navbar-right">
+                        <a href="homepage1.html" id="home" class="hidden-xs">
+                            <span class="glyphicon glyphicon-home"></span> Home</a>
+                        <a href="aboutuspagewithbar.html" id="about" class="hidden-xs">
+                            <i class="fa fa-id-badge"></i> About</a>
+                        <a href="services3.html" id="services" class="hidden-xs active">
+                            <span class="glyphicon glyphicon-list-alt"></span> Services</a>
+                        <a href="contactuspage1.html" id="contact" class="hidden-xs">
+                            <span class="glyphicon glyphicon-earphone"></span> Contact</a>
+                    </div>
+                </div>
+                <div class="navbarContact1" id="navbar1">
+                    <a href="homepage1.html" id="xsasra">Asra travels</a>
+                    <a href="#" onclick="show()" id="bghoverbars" class="hidden-md hidden-lg hidden-sm visible-xs">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="navbar-right">
+                        <a href="homepage1.html" id="home" class="hidden-xs">
+                            <span class="glyphicon glyphicon-home"></span> Home</a>
+                        <a href="aboutuspagewithbar.html" id="about" class="hidden-xs">
+                            <i class="fa fa-id-badge"></i> About</a>
+                        <a href="services3.html" id="services" class="hidden-xs active">
+                            <span class="glyphicon glyphicon-list-alt"></span> Services</a>
+                        <a href="contactuspage1.html" id="contact" class="hidden-xs">
+                            <span class="glyphicon glyphicon-earphone"></span> Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidenav hidden-md hidden-lg visible-xs visible-sm" id="mySidenav">
+                <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                <center>
+                    <a href="homepage1.html">Home</a>
+                    <a href="aboutuspagewithbar.html">About</a>
+                    <a href="services3.html">Services</a>
+                    <a href="contactuspage1.html">Contact</a>
+                </center>
+            </div>
+        </div>
+        <div class="row bgcontent">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 contentservice">
+                <h2 id="demo"></h2>
+                <hr style="width:50%; height:1px;border-width:0;color:black;background-color:black;">
+            </div>
+        </div>
+        <div class="row container-fluid bgx ">
+            <div class="col-sm-12">
+                <div class="col-md-2 link margin10pxtop">
+                    <a id="a1" onclick="fn1()" class="active">Tour Packages</a>
+                    <a id="a2" onclick="fn2()">Ticket Booking</a>
+                    <a id="a3" onclick="fn3()">Passport and Visa</a>
+                    <a id="a4" onclick="fn4()">Hotel and Car reservations</a>
+                    <a id="a5" onclick="fn5()">Money Transfer</a>
+                </div>
+                <div class="col-sm-10 margin10pxtop">
+                    <div id="1">
+                        <center>
+                            <div class="col-sm-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading fontt">Domestic tour package</div>
+                                    <div class="panel-body col-md-12">
+                                        <img src="Taj-Mahal.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                    <div class="panel-footer">
+                                         <h4> Contact us for more details</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading fontt">International tour package</div>
+                                    <div class="panel-body col-md-12">
+
+                                        <div class="col-md-12">
+                                            <img src="International.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                         <h4> Contact us for more details</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading fontt">Religious tour package</div>
+                                    <div class="panel-body col-md-12">
+
+                                        <div class="col-md-12">
+                                            <img src="hajj-tour.png" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                        </div>
+                                    </div>
+                                    <div class="panel-footer">
+                                         <h4> Contact us for more details</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </center>
+                    </div>
+                    <div id="2" class="disp">
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Flight tickets</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="planetickets.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Train tickets</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="train.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Bus tickets</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="busticket.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="3" class="disp">
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Passport</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="passport.png" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Visa</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="visa.png" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt"> Student and tourist visa</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="visa1.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="4" class="disp">
+
+                        <div class="col-sm-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt"> Hotel reservations</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="hotelbook.png" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Car Rental</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="car-rental.jpg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="5" class="disp">
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Ria - Money</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="ria-money.jpeg" class="thumbnail img-responsive" style="width:100%;" alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Xpress - Money</div>
+                                <div class="panel-body col-md-12">
+
+                                    <div class="col-md-12">
+                                        <img src="xpress-money.jpg" class="thumbnail img-responsive" style="width:100%; " alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading fontt">Western - Union</div>
+                                <div class="panel-body col-md-12">
+                                    <div class="col-md-12">
+                                        <img src="Western-Union.png" class="thumbnail img-responsive" style="width:100%; " alt="vacation packages" title="vacation packages">
+                                    </div>
+                                </div>
+                                <div class="panel-footer">
+                                     <h4> Contact us for more details</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row  bgx1">
+            <div class="col-md-12 col-xs-12">
+                <footer class="whereStyle">
+                    <p>Where can you find us ???</p>
+                </footer>
+            </div>
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 footerservice1">
+                <div class="col-xs-12 col-sm-6" id="con1">
+                    <span class="glyphicon glyphicon-earphone sizecoloricon"></span>
+                    <p class="fontp">Contact Us</p>
+                    <br>
+                    <p class="fontp1">Tel-no: 044-24347043</p>
+                    <p class="fontp1">E-mail:
+                        <span class="glyphicon glyphicon-envelope sizecoloricon"></span> asratravels@gmail.com</p>
+                    <p class="fontp1">Telefax: 42049786</p>
+                </div>
+                <div class="col-xs-12 col-sm-6" id="con2">
+                    <span class="glyphicon glyphicon-map-marker sizecoloricon"></span>
+                    <p class="fontp">Location</p>
+                    <br>
+                    <p class="fontp1">G-8 , "N.S. House" - #682,Link Road</p>
+                    <p class="fontp1">Anna Salai, Nandanam</p>
+                    <p class="fontp1">Chennai- 600 035</p>
+                </div>
+            </div>
+        </div>
+        <div class="row container-fluid bgx1">
+            <div class="col-md-12 margin10pxtopmap ">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0777924208173!2d80.23529731482257!3d13.030717990817148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676d34f23a3f%3A0xea7ab03596193102!2sAsra+Consultants+%26+Travels+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1526540251373"
+                    width="100%" height="350px" frameborder="0" style="border:1px solid black"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <footer class="footerStyle">
+                    <p>Copyright @ email : asratravel@gmail.com done by UzmaSabeeha</p>
+                </footer>
+            </div>
+        </div>
+        <button onclick="topFunction()" id="scrollBtn" title="Go to top"><span class="glyphicon glyphicon-chevron-up"></button>
+    </div>
+</body>
+
+</html>

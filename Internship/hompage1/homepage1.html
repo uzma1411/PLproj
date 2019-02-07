@@ -1,0 +1,519 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--jQuery library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Latest compiled and minified JavaScript-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        a {
+            font-family: 'Emilys Candy';
+            font-size: 18px;
+        }
+
+        .bgserviceParallex,
+        .bg2,
+        .bg3 {
+
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .bgserviceParallex {
+            background-image: url("newyork.jpg");
+            min-height: 80%;
+        }
+
+        .bg2 {
+            background-image: url("lights.jpg");
+            opacity: 0.94;
+            min-height: 400px;
+        }
+
+        .bg3 {
+            background-image: url("Istanbul.jpg");
+            min-height: 80%;
+        }
+
+        .navbarContact {
+            background-color: black;
+            padding: 10px;
+            font-size: 15px;
+            font-family: 'Emilys Candy';
+            overflow: hidden;
+            position: fixed;
+            top: -50px;
+            width: 100%;
+            display: block;
+            transition: top 0.3s;
+            z-index: 1;
+        }
+
+        .navbarContact a {
+            text-decoration: none;
+            padding: 20px 20px 20px 20px;
+            color: azure;
+        }
+
+        .navbarContact a:hover {
+            color: snow;
+            background-color: rgba(145, 35, 35, 0.788);
+        }
+
+        .navbarContact a.active {
+            background-color: rgb(20, 38, 202);
+            color: snow;
+        }
+
+        .navbarContact1 {
+            background-color: rgba(49, 47, 47, 0.705);
+            padding: 15px;
+            font-size: 15px;
+            font-family: 'Emilys Candy';
+            overflow: hidden;
+            z-index: 1;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            display: block;
+        }
+
+        .navbarContact1 a {
+            text-decoration: none;
+            padding: 15px;
+            color: azure;
+        }
+
+        .navbarContact1 a:hover {
+            color: snow;
+            background-color: rgba(145, 35, 35, 0.788);
+        }
+
+        .navbarContact1 a.active {
+            background-color: rgb(20, 38, 202);
+            color: snow;
+        }
+
+        #bghoverbars:hover {
+            float: none;
+            background-color: rgb(33, 49, 139);
+            color: snow;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(33, 49, 139);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            font-family: '';
+        }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #e6dfdf;
+            display: block;
+            font-family: 'Jura';
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #0f0c0c;
+            font-size: 30px;
+            font-family: 'Faster One';
+        }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+
+        /* Extra small devices (phones, 600px and down) */
+
+        @media only screen and (max-width: 600px) {
+            #navbar {
+                top: -100px;
+            }
+            #xsasra {
+                float: right;
+            }
+        }
+
+        @media only screen and (max-width:768px) {
+            #xsasra {
+                float: right;
+            }
+            #navbar {
+                top: -100px;
+            }
+        }
+
+        .caption {
+            margin-top: 250px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+
+        .caption span.border {
+            background-color: #111;
+            color: #fff;
+            padding: 18px;
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+
+        .footerhome {
+            background-image: url("banner.jpg");
+            background-attachment: scroll;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.377);
+            color: azure;
+            font-size: 20px;
+            overflow: hidden;
+            font-family: 'Anonymous Pro';
+
+            padding: 5px;
+            padding-top: 15px;
+            text-align: center;
+        }
+
+        /*For slider*/
+
+        .carousel {
+            background: #000000;
+            margin-top: 20px;
+        }
+
+        .carousel .item {
+            width: 100%;
+            height: 100%;
+            /* Set width to 100% */
+          
+            /* Prevent carousel from being distorted if for some reason image doesn't load */
+        }
+
+        .carousel .item img {
+            margin: 0 auto;
+            /* Align slide image horizontally center */
+        }
+
+        .bs-example {
+            margin: 20px;
+        }
+
+        .carousel-caption h3 {
+            color: #fff !important;
+            background-color: rgba(0, 0, 0, 0.719);
+            padding: 10px;
+            box-shadow: 2px 0px 5px azure;
+        }
+
+        @media (max-width: 600px) {
+            .carousel-caption {
+                display: none;
+                /* Hide the carousel text when the screen is less than 600 pixels wide */
+            }
+            .bs-example{
+                margin: 10px auto;
+                height: 200px;
+                width: 500px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        function show() {
+            document.getElementById("mySidenav").style.width = "100%";
+        }
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+                document.getElementById("navbar1").style.display = "none";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+                document.getElementById("navbar1").style.display = "block";
+            }
+
+        }
+
+    </script>
+    <div style="overflow-x: hidden;">
+
+
+        <div class="bgserviceParallex row">
+            <div class="col-md-12">
+                <div class="navbarContact" id="navbar">
+                    <a href="#" id="xsasra">Asra travels &nbsp;&nbsp;
+                        <img src="logo-0.jpg" height="20px" width="20px">
+                    </a>
+                    <a href="#" onclick="show()" id="bghoverbars" class="hidden-md hidden-lg hidden-sm visible-xs">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="navbar-right">
+                        <a href="homepage1.html" id="home" class="hidden-xs active">
+                            <span class="glyphicon glyphicon-home"></span> Home</a>
+                        <a href="done/aboutuspagewithbar.html" id="about" class="hidden-xs">
+                            <i class="fa fa-id-badge"></i> About</a>
+                        <a href="done/services3.html" id="services" class="hidden-xs">
+                            <span class="glyphicon glyphicon-list-alt"></span> Services</a>
+                        <a href="done/contactuspage1.html" id="contact" class="hidden-xs">
+                            <span class="glyphicon glyphicon-earphone"></span> Contact</a>
+                    </div>
+                </div>
+                <div class="navbarContact1" id="navbar1">
+                    <a href="#" id="xsasra">Asra travels &nbsp;&nbsp;
+                        <img src="logo-0.jpg" height="30px" width="30px">
+                    </a>
+                    <a href="#" onclick="show()" id="bghoverbars" class="hidden-md hidden-lg hidden-sm visible-xs">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <div class="navbar-right">
+                        <a href="homepage1.html" id="home" class="hidden-xs active">
+                            <span class="glyphicon glyphicon-home"></span> Home</a>
+                        <a href="done/aboutuspagewithbar.html" id="about" class="hidden-xs">
+                            <i class="fa fa-id-badge"></i> About</a>
+                        <a href="done/services3.html" id="services" class="hidden-xs">
+                            <span class="glyphicon glyphicon-list-alt"></span> Services</a>
+                        <a href="done/contactuspage1.html" id="contact" class="hidden-xs">
+                            <span class="glyphicon glyphicon-earphone"></span> Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="sidenav hidden-md hidden-lg visible-xs visible-sm" id="mySidenav">
+                <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+                <center>
+                    <a href="#">Home</a>
+                    <a href="done/aboutuspagewithbar.html">About</a>
+                    <a href="done/services3.html">Services</a>
+                    <a href="done/contactuspage1.html">Contact</a>
+                </center>
+            </div>
+            <div class="col-md-12">
+                <div class="caption">
+                    <span class="border">Asra Travels</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+                <h3 style="text-align:center;">About Us</h3>
+                <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
+                    foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at,
+                    sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis
+                    blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi,
+                    curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor,
+                    nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque
+                    risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non
+                    id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea
+                    sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.
+                </p>
+            </div>
+        </div>
+
+        <div class="bg2 row">
+            <div class="col-md-12">
+                <div class="caption">
+                    <span class="border">Services</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+                <h3 style="text-align:center;">Image Gallery</h3>
+                <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the
+                    foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at,
+                    sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis
+                    blandit dignissim. Viverra interdum mi m porta porttitor placerat leo.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bs-example">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Carousel indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                            <li data-target="#myCarousel" data-slide-to="3"></li>
+                            <li data-target="#myCarousel" data-slide-to="4"></li>
+                            <li data-target="#myCarousel" data-slide-to="5"></li>
+                            <li data-target="#myCarousel" data-slide-to="6"></li>
+                            <li data-target="#myCarousel" data-slide-to="7"></li>
+                            <li data-target="#myCarousel" data-slide-to="8"></li>
+                            <li data-target="#myCarousel" data-slide-to="9"></li>
+                            <li data-target="#myCarousel" data-slide-to="10"></li>
+                        </ol>
+                        <!-- Wrapper for carousel items -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <img src="slider18.jpg" alt="First Slide">
+                                <div class="carousel-caption">
+                                    <h3>Tour packages</h3>
+                                    <p> Domestic and International</p>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <img src="sydney.jpg" alt="Second Slide">
+                                <div class="carousel-caption">
+                                        <h3>Sydney</h3>
+                                        <p>One of the beautiful places in Australia</p>
+                                    </div>
+                            </div>
+                            <div class="item">
+                                <img src="czech_republic_prague.jpg" alt="Third Slide">
+                                <div class="carousel-caption">
+                                        <h3>Prague</h3>
+                                        <p>>One of the beautiful places in Czech</p>
+                                    </div>
+                            </div>
+                            <div class="item">
+                                <img src="paris.jpg" alt="Fourth Slide">
+                                <div class="carousel-caption">
+                                        <h3>Paris</h3>
+                                        <p>One of the beautiful places in France</p>
+                                    </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="London.jpg" alt="5th Slide">
+                                <div class="carousel-caption">
+                                        <h3>London</h3>
+                                        <p>All hail the queen of England</p>
+                                    </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="Italy.jpg" alt="6th Slide">
+                                <div class="carousel-caption">
+                                        <h3>Italy</h3>
+                                        <p>Pizza Mania</p>
+                                    </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="Budapest.jpg" alt="7th Slide">
+                                <div class="carousel-caption">
+                                        <h3>Budapest</h3>
+                                        <p>Serendipity</p>
+                                    </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="dubrovnik.jpg" alt="8th Slide">
+                                <div class="carousel-caption">
+                                        <h3>Dubrovnik</h3>
+                                        <p>SRK</p>
+                                    </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="Vancouver.jpg" alt="9th Slide">
+                                <div class="carousel-caption">
+                                        <h3>Vancouver</h3>
+                                        <p>Coldy canada</p>
+                                    </div>
+                            </div>
+
+                            <div class="item">
+                                <img src="chicago.jpg" alt="10th Slide">
+                                <div class="carousel-caption">
+                                        <h3>Chicago</h3>
+                                        <p>City in Illinios, US</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <!-- Carousel controls -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                        </a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="color: rgb(196, 196, 196);background-color:rgb(19, 18, 18);padding: 20px; text-align: center;">
+            </div>
+        </div>
+        <div class="bg3 row">
+            <div class="col-md-12">
+                <div class="caption">
+                    <span class="border">Contact Us</span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" style="color: rgb(196, 196, 196);background-color:rgb(19, 18, 18);padding: 10px; text-align: center;">
+            </div>
+            <div class="col-md-12 footerhome">
+                <div class="col-sm-6 col-xs-12 ">
+                    <span class="glyphicon glyphicon-earphone sizecoloricon"></span>
+                    <p class="fontp">Contact Us</p>
+                    <br>
+                    <p class="fontp1">Tel-no: 044-24347043</p>
+                    <p class="fontp1">E-mail:
+                        <span class="glyphicon glyphicon-envelope sizecoloricon"></span> asratravels@yahoo.com</p>
+                    <p class="fontp1">Telefax: 42049786</p>
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <span class="glyphicon glyphicon-map-marker sizecoloricon"></span>
+                    <p class="fontp">Location</p>
+                    <br>
+                    <p class="fontp1">G-8 , "N.S. House" - #682,Link Road</p>
+                    <p class="fontp1">Anna Salai, Nandanam</p>
+                    <p class="fontp1">Chennai- 600 035</p>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.0777924208173!2d80.23529731482257!3d13.030717990817148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52676d34f23a3f%3A0xea7ab03596193102!2sAsra+Consultants+%26+Travels+Pvt.+Ltd.!5e0!3m2!1sen!2sin!4v1526540251373"
+                    width="100%" height="350px" frameborder="0" style="border:1px solid black"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div style="color:#ddd;background-color:rgb(0, 0, 0);text-align:center;padding:15px 0px;text-align: center;">
+                    <p>Copyright @ asratravels@yahoo.com</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

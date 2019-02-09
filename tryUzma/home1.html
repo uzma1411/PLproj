@@ -109,7 +109,7 @@
             src: url(Edwardian_Scr_ITC_TT.ttf);
         }
 
-       
+    
     </style>
 </head>
 
@@ -119,14 +119,17 @@
         var i = 0;
         var txt = 'Belle Bridal Services is the perfect destination for the brides to get gorgeously groomed for the big day - from head to toe. Our stylists can conveniently take care of all your needs from makeup artisty, lash enhancements,hair styling and much more !!! Spring in with us - BBs to get lasting impressions on your big day !!!'
         var speed = 100;
-
+       
+        
         function typeWriter() {
+           
             if (i < txt.length) {
+               
                 document.getElementById("x1").innerHTML += txt.charAt(i);
                 i++;
                 setTimeout(typeWriter, speed);
             }
-
+           
         }
     </script>
 
@@ -140,11 +143,13 @@
         <a href="contactus.html" style="left:50px">Contact Us</a>
     </nav>
     <section id="sec1">
-        <p id="x1></p>
-               
-            <a href="#"><img src="images/BknowBT.jpg" height="60" width="150"></a>
-            <a href="login.html"><img src="images/login.jpg" height="100" width="100"></a>
-                                                                                     
+        <p id="x1"></p>
+        
+                <a href="#"><img src="images/BknowBT.jpg" height="80" width="150"></a>
+                <a href="login.html"><img src="images/login.jpg" height="100" width="100"></a>
+       
+            
+        
     </section>
 
     <footer></footer>

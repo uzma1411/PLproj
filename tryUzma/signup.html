@@ -1,0 +1,262 @@
+<html>
+
+<head>
+    <style>
+        header {
+            height: 100;
+            width: auto;
+            text-align: center;
+        }
+
+        header img {
+            margin-top: -12px;
+        }
+
+        nav {
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.972);
+            /*    background-image: linear-gradient(rgb(252, 209, 192), rgb(236, 231, 231));
+            background-image:linear-gradient(green,darkgreen);
+           */
+            box-shadow: 0px 4px 10px black;
+            height: 65px;
+            width: auto;
+            text-align: center;
+        }
+
+        nav a {
+            position: relative;
+            padding: 10px;
+            text-decoration: none;
+            font-family: 'myFont';
+            font-size: 32px;
+            font-weight: bold;
+            top: 10px;
+            color: rgb(165, 50, 50);
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            color: rgb(28, 20, 138);
+        }
+
+        @font-face {
+            font-family: myFont;
+            src: url(gabriola.ttf);
+        }
+
+        /* Add animation to "page content"  position: relative;*/
+        .animate-bottom {
+
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0;
+
+            }
+
+            to {
+                bottom: 0px;
+                opacity: 1;
+
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0;
+
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1;
+
+            }
+        }
+
+        #sec4 {
+            background-image: url('images/bgsign3.PNG');
+            margin-top: 15px;
+background-size: cover;
+            /*background-attachment: fixed;
+            opacity: 0.8;
+            background-position: left;
+            */
+            background-repeat: no-repeat;
+
+            height: 595px;
+            width: auto;
+            box-sizing: border-box;
+          
+            
+        }
+        form{
+            /*
+            float: right;
+            margin-right: 200px;
+            font-family:'myfont3';
+            font-size: 30px;
+            margin-top: 10px;*/
+            color: black;
+            box-shadow: 0px 0px 20px black;
+            text-align: center;
+            background-color: rgba(250, 250, 250, 0.808);
+            margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  font-family: 'myFont';
+  font-size: 18px;
+  width: 50%;
+        }
+        
+        #img1{
+            margin-left: 150px;
+        }
+        .txt{
+            padding: 15px;
+            width:200px;
+            height: 40px;
+            border-radius: 10px;
+            left:30px;
+        }
+        .txt:focus{
+            background-color: antiquewhite;
+            color: black;
+        
+        }
+        #logbtn{
+            background-color: black;
+            border: none;   
+            border-radius: 5px;
+            width:200px;
+            height: 50px;
+            color: aliceblue;
+            text-align: center;
+            font-family: 'myFont';
+            font-size: 27px;
+            margin-left: 150px;
+        }
+        @font-face {
+            font-family: myfont3;
+            src: url(Arizonia-Regular.ttf);
+        }
+        @font-face {
+            font-family: myFont;
+            src: url(gabriola.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/bbs11.png" height="200">
+    </header>
+    <nav class="animate-bottom ">
+        <a href="hh.html" style="right:20px;">Home</a>
+        <a href="aboutUs.html" style="right:20px">Look Book</a>
+        <a href="services.html" style="left:50px">Services</a>
+        <a href="cc.html" style="left:50px">Contact Us</a>
+    </nav>
+    <section id="sec4">
+        <article id="arc1">
+            <img id="img1" src="images/teambride.png" height="100px" width="100px">
+            <form>
+                <p>User Name:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                        class="txt" id="uname" type="text" name="uname" required><sub id="err1" style="color:red;font-family:'Lucida Sans , sans-serif';font-size: 20px;"></sub></p>
+                <p>Password:&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="txt" id="pswd" type="password" name="pswd" required><span id="err2" style="color:red;font-family:'Lucida Sans , sans-serif';font-size: 20px;"></span></p>
+                <p>Confirm Password: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input class="txt"
+                        type="password" name="cpswd" id="cpswd" required><span id="err3" style="color:red;font-family:'Lucida Sans , sans-serif';font-size: 20px;"></span></p>
+                <p>Email:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input class="txt" id="mail1" type="email" name="mail" required><span id="err4" style="color:red;font-family:'Lucida Sans , sans-serif';font-size: 20px;"></span></p>
+                <p>Phone number:
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                        class="txt" id="mob" type="text" name="uname" pattern="[0-9]{10}" required><span id="err5"
+                        style="color:red;font-family:'Lucida Sans , sans-serif';font-size: 20px;"></span><span id="err6"
+                        style="color:red;font-family:'Lucida Sans , sans-serif';font-size: 20px;"></span></p>
+                <input id="logbtn" type="submit" name="submit" value="SignUp">
+            </form>
+        </article>
+    </section>
+    <script>
+        var btn = document.getElementById('logbtn');
+        btn.onclick = function (e) {
+            var passwordd = document.getElementById('pswd');
+            check_validation();
+            var bool = checkPasswordValidity();
+            // alert("passwd"+bool); 
+            if (!bool) { e.preventDefault(); passwordd.focus(); }
+        }
+        function check_validation() {
+            var name = document.getElementById('uname');
+            var passwordd = document.getElementById('pswd');
+            var cpassword = document.getElementById('cpswd');
+            var emaill = document.getElementById('mail1');
+            var mobile = document.getElementById('mob');
+
+
+            if (name.checkValidity) {
+                document.getElementById("err1").innerHTML = "*";
+            }
+            if (passwordd.checkValidity) {
+                document.getElementById("err2").innerHTML = "*";
+            }
+            if (cpassword.checkValidity) {
+                document.getElementById("err3").innerHTML = "*";
+            }
+            if (emaill.checkValidity) {
+                document.getElementById("err4").innerHTML = "*";
+            }
+            if (mobile.checkValidity) {
+                document.getElementById("err5").innerHTML = "*";
+            }
+            if (mobile.validity.valueMissing) {
+                //console.log("required");
+                document.getElementById("err5").innerHTML = "*";
+            }
+            else if (mobile.validity.patternMismatch) {
+                //console.log("wrong");
+                alert('Invalid Phone Number');
+                //document.getElementById("err6").innerHTML="Invalid Phone Number";   
+            }
+            else {
+                //console.log("right");
+                document.getElementById("err6").innerHTML = " ";
+            }
+            if (emaill.validity.patternMismatch) {
+                //console.log("wrong");
+                alert('Invalid Email');
+                //document.getElementById("err6").innerHTML="Invalid Phone Number";   
+            }
+
+
+        }
+        function checkPasswordValidity() {
+            var p = document.getElementById('pswd');
+            var cp = document.getElementById('cpswd');
+            if (p.value != cp.value) {
+                alert('Password must match');
+                //document.getElementById("err1").innerHTML = 'Passwords must match.';
+                return false;
+            }
+            else {
+                //document.getElementById("err1").innerHTML = "";
+                return true;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

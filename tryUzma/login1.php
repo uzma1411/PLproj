@@ -1,0 +1,210 @@
+<?php
+session_start();
+// unset ($_SESSION["username"]);
+//unset ($_SESSION["pswdd"]);
+unset ($_SESSION["id"]);
+if(isset($_SESSION["username"]))
+{
+    $name = $_SESSION["username"];
+   $pswdd =  $_SESSION["pswdd"];
+   //unset ($_SESSION["username"]);
+//unset ($_SESSION["pswdd"]);
+}
+else
+{
+    $name ='';
+    $pswdd='';
+}
+?>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <style>
+        header {
+            height: 100;
+            width: auto;
+            text-align: center;
+        }
+
+        header img {
+            margin-top: -12px;
+        }
+
+        nav {
+            background-attachment: fixed;
+            background-color: rgba(255, 255, 255, 0.972);
+            /*    background-image: linear-gradient(rgb(252, 209, 192), rgb(236, 231, 231));
+            background-image:linear-gradient(green,darkgreen);
+           */
+            box-shadow: 0px 4px 10px black;
+            height: 65px;
+            width: auto;
+            text-align: center;
+        }
+
+        nav a {
+            position: relative;
+            padding: 10px;
+            text-decoration: none;
+            font-family: 'myFont';
+            font-size: 32px;
+            font-weight: bold;
+            top: 10px;
+            color: rgb(165, 50, 50);
+        }
+
+        nav a:hover {
+            text-decoration: none;
+            color: rgb(28, 20, 138);
+        }
+
+        @font-face {
+            font-family: myFont;
+            src: url(gabriola.ttf);
+        }
+
+        /* Add animation to "page content"  position: relative;*/
+        .animate-bottom {
+
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0;
+
+            }
+
+            to {
+                bottom: 0px;
+                opacity: 1;
+
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0;
+
+            }
+
+            to {
+                bottom: 0;
+                opacity: 1;
+
+            }
+        }
+        #sec1login{
+            background-image: url('images/bglogin.jpg');
+            margin-top: 15px;
+            /*background-attachment: fixed;
+            opacity: 0.8;
+            */
+            background-repeat: repeat;
+
+            height: 595px;
+            width: auto;
+            box-sizing: border-box;
+            align-content: center;
+        
+        }
+        #a1{
+            text-align: center;
+            padding: 20px;
+            font-size: 40px;
+            color: aliceblue;
+            font-family: 'myfont3';
+        }
+        .txt{
+            padding: 15px;
+            width:200px;
+            height: 40px;
+            border-radius: 10px;
+            color: black;
+        }
+        #logbtn{
+            background-color: black;
+            border: none;   
+            border-radius: 5px;
+            width:200px;
+            padding: 5px;
+            text-align: center;
+        }
+        @font-face {
+            font-family: myfont3;
+            src: url(FRSCRIPT.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="images/bbs11.png" height="200">
+    </header>
+    <nav class="animate-bottom ">
+        <a href="HOME.php" style="right:20px;">Home</a>
+        <a href="aboutUs.php" style="right:20px">Look Book</a>
+        <a href="services.php" style="left:50px">Services</a>
+        <a href="cc.php" style="left:50px">Contact Us</a>
+    </nav>
+    <section id="sec1login">
+        <form action="logincheck.php" method="GET" novalidate>
+            <article id="a1">
+                <p>User Name: &nbsp;&nbsp;<input id="uname" class="txt" type="text" name="uname" value="<?php echo $name ?>" required><span id="err1" style="color:red;"></span></p>
+                <p>Password: &nbsp;&nbsp; <input id="pswd" class="txt" type="password" name="pswd" value="<?php echo $pswdd ?>" required><span id="err2" style="color:red;"></span></p>
+                <input id="logbtn" type="submit" name="submit" value="Login"><br>
+               <br> <a href="signup.html" style="padding-top:10px;color:rgb(0, 0, 0); font-size:large;font-family:fantasy;">Not
+                    registered ? Click here</a>
+                    <br>
+                    <a style="padding-left:10px;color:rgb(0, 0, 0); font-size:large;font-family:fantasy;" href="Admin/adminLogin1.php">Admin</a>
+    
+            </article>
+
+        </form>
+        </section>
+   
+    <script>
+        var btn=document.getElementById('logbtn');
+          btn.onclick=function(e){
+            var checkes=check_validation();
+              if(checkes==false) 
+                e.preventDefault();
+           
+          }
+          function check_validation(){
+              var checkes=1;
+                var names=document.getElementById('uname');
+                if(names.checkValidity)
+	            {
+                //alert(names.validationMessage);
+	                document.getElementById("err1").innerHTML=names.validationMessage;
+                    if(names.validationMessage.toString().length!=0)
+                        checkes=0;
+	            }
+                var passwordd=document.getElementById('pswd');
+                if(passwordd.checkValidity)
+	            {
+	                document.getElementById("err2").innerHTML=passwordd.validationMessage;
+                    if(passwordd.validationMessage.toString().length!=0)
+                      checkes=0;
+                } 
+            if(checkes==0)
+            {
+                return false;
+            }
+            else{
+               return true;
+            }
+          }
+        </script>
+</body>
+
+</html>

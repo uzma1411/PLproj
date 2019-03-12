@@ -1,21 +1,4 @@
-<?php
-session_start();
-// unset ($_SESSION["username"]);
-//unset ($_SESSION["pswdd"]);
-unset ($_SESSION["id"]);
-if(isset($_SESSION["username"]))
-{
-    $name = $_SESSION["username"];
-   $pswdd =  $_SESSION["pswdd"];
-   //unset ($_SESSION["username"]);
-//unset ($_SESSION["pswdd"]);
-}
-else
-{
-    $name ='';
-    $pswdd='';
-}
-?>
+
 <html>
 
 <head>
@@ -150,16 +133,16 @@ else
         <img src="images/bbs11.png" height="200">
     </header>
     <nav class="animate-bottom ">
-        <a href="HOME.php" style="right:20px;">Home</a>
-        <a href="aboutUs.php" style="right:20px">Look Book</a>
-        <a href="services.php" style="left:50px">Services</a>
-        <a href="cc.php" style="left:50px">Contact Us</a>
+        <a href="HOME.html" style="right:20px;">Home</a>
+        <a href="aboutUs.html" style="right:20px">Look Book</a>
+        <a href="services.html" style="left:50px">Services</a>
+        <a href="cc.html" style="left:50px">Contact Us</a>
     </nav>
     <section id="sec1login">
         <form action="logincheck.php" method="GET" novalidate>
             <article id="a1">
-                <p>User Name: &nbsp;&nbsp;<input id="uname" class="txt" type="text" name="uname" value="<?php echo $name ?>" required><span id="err1" style="color:red;"></span></p>
-                <p>Password: &nbsp;&nbsp; <input id="pswd" class="txt" type="password" name="pswd" value="<?php echo $pswdd ?>" required><span id="err2" style="color:red;"></span></p>
+                <p>User Name: &nbsp;&nbsp;<input id="uname" class="txt" type="text" name="uname" value="" required><span id="err1" style="color:red;"></span></p>
+                <p>Password: &nbsp;&nbsp; <input id="pswd" class="txt" type="password" name="pswd" value="" required><span id="err2" style="color:red;"></span></p>
                 <input id="logbtn" type="submit" name="submit" value="Login"><br>
                <br> <a href="signup.html" style="padding-top:10px;color:rgb(0, 0, 0); font-size:large;font-family:fantasy;">Not
                     registered ? Click here</a>
